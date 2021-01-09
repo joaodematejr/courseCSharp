@@ -7,7 +7,7 @@ namespace Curso
     {
         static void Main(string[] args)
         {
-            PrintService<int> printService = new PrintService<int>();
+            PrintService printService = new PrintService();
 
             Console.Write("How many values ? ");
             int n = int.Parse(Console.ReadLine());
@@ -18,7 +18,7 @@ namespace Curso
                 printService.AddValue(x);
             }
 
-            int a = printService.First();
+            int a = (int)printService.First();
             int b = a + 2;
             Console.WriteLine(b);
 

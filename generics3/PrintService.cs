@@ -2,12 +2,12 @@
 
 namespace Curso
 {
-    class PrintService<T>
+    class PrintService
     {
-        private T[] _values = new T[10];
+        private object[] _values = new object[10];
         private int _count = 0;
 
-        public void AddValue(T value)
+        public void AddValue(object value)
         {
             if (_count == 10)
             {
@@ -17,7 +17,7 @@ namespace Curso
             _count++;
         }
 
-        public T First()
+        public object First()
         {
             if (_count == 0)
             {
