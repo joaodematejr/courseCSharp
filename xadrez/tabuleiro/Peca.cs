@@ -18,6 +18,11 @@ namespace tabuleiro
             this.tab = tab;
         }
 
+        public void incrementarQteMovimento()
+        {
+            qteMovimentos++;
+        }
+
         public abstract bool[,] movimentosPossiveis();
     }
 }
