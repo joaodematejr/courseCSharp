@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using tabuleiro;
 
-
 namespace xadrez
 {
     class PartidaDeXadrez
@@ -52,7 +51,6 @@ namespace xadrez
             tab.colocarPeca(p, origem);
         }
 
-
         public void realizaJogada(Posicao origem, Posicao destino)
         {
             Peca pecaCapturada = executaMovimento(origem, destino);
@@ -80,15 +78,15 @@ namespace xadrez
         {
             if (tab.peca(pos) == null)
             {
-                throw new TabuleiroException("Não existe peça na posição de origem escolhido!");
+                throw new TabuleiroException("Não existe peça na posição de origem escolhida!");
             }
             if (jogadorAtual != tab.peca(pos).cor)
             {
-                throw new TabuleiroException("A peça de origem escolhido não é sua!");
+                throw new TabuleiroException("A peça de origem escolhida não é sua!");
             }
             if (!tab.peca(pos).existeMovimentosPossiveis())
             {
-                throw new TabuleiroException("Não há movimentos possiveis para a peça de origem escolhida!");
+                throw new TabuleiroException("Não há movimentos possíveis para a peça de origem escolhida!");
             }
         }
 
@@ -128,7 +126,7 @@ namespace xadrez
         public HashSet<Peca> pecasEmJogo(Cor cor)
         {
             HashSet<Peca> aux = new HashSet<Peca>();
-            foreach (Peca x in capturadas)
+            foreach (Peca x in pecas)
             {
                 if (x.cor == cor)
                 {
@@ -141,7 +139,7 @@ namespace xadrez
 
         private Cor adversaria(Cor cor)
         {
-            if (cor == Cor.Preta)
+            if (cor == Cor.Branca)
             {
                 return Cor.Preta;
             }
@@ -202,7 +200,6 @@ namespace xadrez
             colocarNovaPeca('e', 7, new Torre(tab, Cor.Preta));
             colocarNovaPeca('e', 8, new Torre(tab, Cor.Preta));
             colocarNovaPeca('d', 8, new Rei(tab, Cor.Preta));
-
         }
     }
 }
