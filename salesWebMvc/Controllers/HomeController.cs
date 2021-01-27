@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SalesWebMvc.Models.ViewModels;
+using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {
@@ -25,7 +25,6 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Privacy()
         {
-            ViewData["Bla"] = "teste";
             return View();
         }
 
