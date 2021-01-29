@@ -1,10 +1,10 @@
 ﻿using System;
 namespace SalesWebMvc.Models.Enums
 {
-    public class SalesStatus
+    public enum SalesStatus : int
     {
-        public SalesStatus()
-        {
-        }
+        Pending = 0,
+        Billed = 1,
+        Canceled = 2
     }
 }
