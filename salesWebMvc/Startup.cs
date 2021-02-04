@@ -32,6 +32,7 @@ namespace SalesWebMvc
             services.AddDbContextPool<SalesWebMvcContext>(dbContextOptions => dbContextOptions.UseMySql("server=localhost;userid=root;password=j@od3m@t3jr;database=saleswebmvcappdb", new MySqlServerVersion(new Version(8, 0, 19)), mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend)).EnableSensitiveDataLogging().EnableDetailedErrors());
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
         }
 
 
