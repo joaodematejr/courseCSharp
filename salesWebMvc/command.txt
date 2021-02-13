@@ -5,3 +5,6 @@ dotnet ef database update
 
 TEMPLATE
 https://bootswatch.com/pulse/
+
+
+sudo /usr/local/mysql/support-files/mysql.server start
