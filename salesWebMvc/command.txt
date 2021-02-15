@@ -8,3 +8,6 @@ https://bootswatch.com/pulse/
 
 
 sudo /usr/local/mysql/support-files/mysql.server start
+
+
+https://github.com/joaodematejr/courseCSharp
